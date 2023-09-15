@@ -2,8 +2,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.sql.Driver;
+import java.time.Duration;
 
 public class GithubLoginTest {
     @Test
@@ -19,7 +24,7 @@ public class GithubLoginTest {
         }
 
         WebElement emailElement=chrome.findElement(By.name("login"));
-        emailElement.sendKeys("mesrop.karapetyan3@gmail.com");
+        emailElement.sendKeys("steve003001@gmail.com");
 
         WebElement passwordElement=chrome.findElement(By.name("password"));
         passwordElement.sendKeys("LoginTestCasePass");
@@ -48,13 +53,14 @@ public class GithubLoginTest {
         }
 
         WebElement emailElement=chrome.findElement(By.name("login"));
-        emailElement.sendKeys("mesrop.karapetyan3@gmail.com");
+        emailElement.sendKeys("steve003001@gmail.com");
 
         WebElement passwordElement=chrome.findElement(By.name("password"));
         passwordElement.sendKeys("IncorrectPassword");
 
         WebElement loginElement=chrome.findElement(By.name("commit"));
         loginElement.click();
+
 
         try {
             Thread.sleep(3000);
@@ -106,7 +112,7 @@ public class GithubLoginTest {
         }
 
         WebElement emailElement=firefox.findElement(By.name("login"));
-        emailElement.sendKeys("mesrop.karapetyan3@gmail.com");
+        emailElement.sendKeys("steve03001@gmail.com");
 
         WebElement passwordElement=firefox.findElement(By.name("password"));
         passwordElement.sendKeys("LoginTestCasePass");
@@ -135,7 +141,7 @@ public class GithubLoginTest {
         }
 
         WebElement emailElement=firefox.findElement(By.name("login"));
-        emailElement.sendKeys("mesrop.karapetyan3@gmail.com");
+        emailElement.sendKeys("steve03001@gmail.com");
 
         WebElement passwordElement=firefox.findElement(By.name("password"));
         passwordElement.sendKeys("IncorrectPassword");
